@@ -7,7 +7,8 @@ const userAge = parseInt(prompt("Quanti anni hai?"));
 console.log(userAge, typeof(userAge));
 
 //Definire il prezzo della tratta (0.21 € al km)
-
+const userPrice = 0.21 * userKm
+console.log(userPrice, typeof(userPrice));
 //Se il passeggero è minorenne applicare il 20% di sconto sul prezzo della tratta
 //Se il passeggero è over 65 applicare il 40% di sconto sul prezzo della tratta
 
