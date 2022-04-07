@@ -11,6 +11,15 @@ const userPrice = 0.21 * userKm
 console.log(userPrice, typeof(userPrice));
 //Se il passeggero è minorenne applicare il 20% di sconto sul prezzo della tratta
 //Se il passeggero è over 65 applicare il 40% di sconto sul prezzo della tratta
+let discount
+	
+	if (18 > userAge) {
+		const userPriceDiscount1 = (userPrice * 20) / 100;
+		console.log(userPriceDiscount1)
+	} else if (userAge > 65) {
+		const userPriceDiscount2 = (userPrice * 40) / 100;
+		console.log(userPriceDiscount2)
+	}
 
 //Impostare l'output del prezzo finale con massimo due decimali
 
