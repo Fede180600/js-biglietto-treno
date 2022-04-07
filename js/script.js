@@ -13,14 +13,16 @@ console.log(userPrice, typeof(userPrice));
 //Se il passeggero è over 65 applicare il 40% di sconto sul prezzo della tratta
 let userPriceDiscounted = userPrice;
 	
-	if (18 > userAge) {
-		const userPriceDiscounted = userPrice -(userPrice * 20) / 100;
-		console.log(userPriceDiscounted)
-	} else if (userAge > 65) {
-		const userPriceDiscounted = userPrice - (userPrice * 40) / 100;
-		console.log(userPriceDiscounted)
-	}
+if (userAge < 18) {
+	userPriceDiscounted = userPrice -(userPrice * 20) / 100;
+	console.log(userPriceDiscounted)
+} else if (userAge >= 65) {
+	userPriceDiscounted = userPrice - (userPrice * 40) / 100;
+	console.log(userPriceDiscounted)
+}
 
 //Impostare l'output del prezzo finale con massimo due decimali
-
+const priceFormatted = userPriceDiscounted.toFixed(2);
+console.log(priceFormatted, typeof(priceFormatted));
 //Stampare l'output nell'html
+document.getElementById('my-price').innerHTML = priceFormatted;
